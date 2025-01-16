@@ -6,7 +6,6 @@ from flask_session import Session
 import logging
 import json
 import bcrypt
-import traceback
 from datetime import datetime
 import base64
 
