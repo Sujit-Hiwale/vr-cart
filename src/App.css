@@ -1,0 +1,151 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  /* background: #b8f3ea; */
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.header-content {
+  display: flex;
+  align-items: center; /* Vertically align logo and heading */
+}
+
+.logo-image {
+  width: 70px; /* Adjust size of logo */
+  height: auto;
+  margin-right: 10px; /* Space between logo and text */
+}
+
+.app-heading1 {
+  font-size: 6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(6, 6, 6);
+  margin: 0;
+
+}
+.app-heading2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(6, 6, 6);
+  margin: 0;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.main-content {
+  margin-left: 250px; /* Prevent overlap with the sidebar */
+  padding: 20px; /* Add padding for content */
+}
+
+/* Search Bar Container */
+.search-bar-container {
+  position: relative; /* Set position for containing the absolute icons */
+  display: flex;
+  align-items: center;
+  margin: 20px auto;
+  max-width: 800px; /* Adjust width of the container */
+}
+
+/* Search Bar */
+.search-bar {
+  flex-grow: 1; /* Take the available space */
+  padding: 10px 45px 10px 15px; /* Space for the search icon */
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+  border-color: #3da2a0; /* Highlighted color on focus */
+}
+
+/* Placeholder */
+.search-bar::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* Search Icon */
+.search-icon {
+  position: absolute;
+  left: calc(100% - 45px); /* Position the search icon relative to the bar */
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}
+
+/* Right-side Icons */
+.right-icons {
+  position: absolute;
+  top: 50%; /* Center vertically with the search bar */
+  transform: translateY(-50%);
+  right: -130px; /* 50px from the search bar + 50px padding */
+  display: flex;
+  gap: 20px; /* Space between icons */
+}
+
+.icon {
+  font-size: 20px;
+  color: #3d6264;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #85ede8; /* Highlight color on hover */
+}

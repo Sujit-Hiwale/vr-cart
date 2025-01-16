@@ -1,0 +1,55 @@
+/* Container for horizontal scrolling */
+.products-container {
+    display: flex; /* Align items in a single row */
+    flex-direction: row; /* Ensure horizontal alignment */
+    gap: 20px; /* Add space between products */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 20px; /* Add some padding around the container */
+    scroll-behavior: smooth; /* Smooth scrolling experience */
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  /* Hide the scrollbar for better aesthetics */
+  .products-container::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar on WebKit browsers */
+  }
+  
+  /* Ensure product cards align and don't shrink */
+  .product-card {
+    flex: 0 0 250px; /* Set a fixed width for each product card */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for cards */
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image styling */
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Title styling */
+  .product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* Price styling */
+  .product-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  

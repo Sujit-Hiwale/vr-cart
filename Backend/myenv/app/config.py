@@ -1,0 +1,1 @@
+DATABASE_PATH = 'C:/Users/ABO SEIF/vrcart/Backend/Database/database.sqlite'
