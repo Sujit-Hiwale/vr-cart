@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #8e44ad, #3498db);
+  background: linear-gradient(135deg, #000000, #000000);
   font-family: "Arial", sans-serif;
 }
 
@@ -12,11 +12,12 @@
 .login-container {
   display: flex;
   width: 90%;
-  max-width: 1100px;
-  background: #ffffff;
+  max-width: 1300px;
+  background: #000000;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin-top: -40px;
 }
 
 /* Left Section - Login Form */
@@ -137,7 +138,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f8f9fa;
+  background: #000000;
 }
 
 .login-illustration img {

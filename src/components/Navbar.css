@@ -6,8 +6,7 @@
   height: 55%;
   width: 60px;
   border-radius: 25px;
-  border: #48efe1;
-  /* background-color: #9fb9be; */
+  border: #080808;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,15 +28,17 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-  color: #000000;
+  color:  #73c2b5; /* Default text color */
   font-size: 14px;
   cursor: pointer;
   transition: color 0.3s;
+ 
 }
 
 .navbar-item i {
   font-size: 24px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  color:  #73c2b5; /* Set icon color to gray */
 }
 
 .navbar-item span {
@@ -46,5 +47,20 @@
 }
 
 .navbar-item:hover {
-  color: #48efe1; /* Highlight color on hover */
+  color: #a8e7dd; /* Highlight color on hover */
+}
+
+.navbar-item:hover i {
+  color: #a8e7dd; /* Change icon color on hover */
+}
+
+.login-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.login-link:hover {
+  color: #c9c7c8;
 }
