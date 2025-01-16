@@ -53,3 +53,8 @@
     color: #555;
   }
   
+.product-image {
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  object-fit: cover; /* Ensures image maintains aspect ratio */
+}

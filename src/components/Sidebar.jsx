@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaHome, FaTachometerAlt, FaBox, FaShoppingCart, FaUsers, FaCog } from "react-icons/fa"; // Import icons
 import "./Sidebar.css";
 
 const Sidebar = () => {
@@ -33,32 +34,32 @@ const Sidebar = () => {
             <ul className="sidebar-menu">
               <li>
                 <Link to="/" className="sidebar-link">
-                  Home
+                  <FaHome className="sidebar-icon" /> Home
                 </Link>
               </li>
               <li>
                 <Link to="/dashboard" className="sidebar-link">
-                  Dashboard
+                  <FaTachometerAlt className="sidebar-icon" /> Dashboard
                 </Link>
               </li>
               <li>
                 <Link to="/orders" className="sidebar-link">
-                  Orders
+                  <FaShoppingCart className="sidebar-icon" /> Orders
                 </Link>
               </li>
               <li>
                 <Link to="/products" className="sidebar-link">
-                  Products
+                  <FaBox className="sidebar-icon" /> Products
                 </Link>
               </li>
               <li>
                 <Link to="/customers" className="sidebar-link">
-                  Customers
+                  <FaUsers className="sidebar-icon" /> Customers
                 </Link>
               </li>
               <li>
                 <Link to="/settings" className="sidebar-link">
-                  Settings
+                  <FaCog className="sidebar-icon" /> Settings
                 </Link>
               </li>
             </ul>

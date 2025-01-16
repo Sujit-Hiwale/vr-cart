@@ -1,18 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import ProductCard from "../components/ProductCard";
 import Footer from "../components/Footer";
 import "./first.css";
 
-const products = [
-  { id: 1, image: "/assets/images/product1.jpg", title: "Laptop", price: "$999.99" },
-  { id: 2, image: "/assets/images/product2.jpg", title: "Smartphone", price: "$799.99" },
-  { id: 3, image: "/assets/images/product3.jpg", title: "Headphones", price: "$199.99" },
-  { id: 4, image: "/assets/images/product4.jpg", title: "Tablet", price: "$499.99" },
-  { id: 5, image: "/assets/images/product5.jpg", title: "Smartwatch", price: "$299.99" },
-];
-
 const First = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/api/items/first-products");
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+        const data = await response.json();
+        setProducts(data.items);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   return (
     <div className="first">
       <Banner />
@@ -21,8 +39,8 @@ const First = () => {
         {products.map((product) => (
           <ProductCard
             key={product.id}
-            image={product.image}
-            title={product.title}
+            image={product.image_data}
+            title={product.category}
             price={product.price}
           />
         ))}

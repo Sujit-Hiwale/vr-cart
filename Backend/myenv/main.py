@@ -345,6 +345,41 @@ def get_items_by_category(category):
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+    
+@app.route('/api/items/first-products', methods=['GET'])
+def get_first_product_per_category():
+    try:
+        conn = get_db_connection()
+        query = '''
+        SELECT *
+        FROM items i1
+        WHERE id = (
+            SELECT MIN(id)
+            FROM items i2
+            WHERE i2.category = i1.category
+        )
+        ORDER BY category, id ASC;
+        '''
+        items = conn.execute(query).fetchall()
+        conn.close()
+
+        item_list = [
+            {
+                "id": item["id"],
+                "name": item["name"],
+                "category": item["category"],
+                "price": item["price"],
+                "description": item["description"],
+                "image_data": item["image_data"],
+            }
+            for item in items
+        ]
+        return jsonify({"items": item_list}), 200
+
+    except Exception as e:
+        print("Error:", e)
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == "__main__":
     app.run(port=8080,debug=True)

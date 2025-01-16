@@ -1,151 +1,120 @@
+/* Global Reset */
+* {
+  margin-left: 10px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #000;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html, body {
   width: 100%;
   height: 100%;
-  overflow-x: hidden;
-  /* background: #b8f3ea; */
 }
 
-#root {
-  width: 100%;
-  height: 100%;
-}
+/* App Header */
 .app-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row; /* Stack items vertically */
+  align-items: center; /* Center align everything horizontally */
+  text-align: center;
+  margin-top: 0px; /* Add space at the top */
 }
 
-
+/* Header Content: Logo, 3D, and Shopping */
 .header-content {
   display: flex;
-  align-items: center; /* Vertically align logo and heading */
+  align-items: center; /* Align vertically in the row */
+  justify-content: center; /* Center horizontally */
+  gap: 15px; /* Space between logo, 3D, and Shopping */
+  margin-bottom: 20px; /* Space between header content and search bar */
 }
 
+/* Logo */
 .logo-image {
-  width: 70px; /* Adjust size of logo */
-  height: auto;
-  margin-right: 10px; /* Space between logo and text */
-}
-
-.app-heading1 {
-  font-size: 6rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(6, 6, 6);
-  margin: 0;
-
-}
-.app-heading2 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(6, 6, 6);
-  margin: 0;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.main-content {
-  margin-left: 250px; /* Prevent overlap with the sidebar */
-  padding: 20px; /* Add padding for content */
-}
-
-/* Search Bar Container */
-.search-bar-container {
-  position: relative; /* Set position for containing the absolute icons */
   display: flex;
-  align-items: center;
-  margin: 20px auto;
-  max-width: 800px; /* Adjust width of the container */
+  width: 90px; /* Adjust logo size */
+  height: auto;
+  margin-right: -12px;
+  margin-top: -15px;
+  margin-left: 40px;
+}
+
+/* Headings */
+.app-heading1 {
+  font-size: 5rem; /* Size of "3D" */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #a8e7dd;
+  margin: 0;
+  margin-top: -15px;
+}
+
+.app-heading2 {
+  font-size: 2.5rem; /* Size of "Shopping" */
+  font-weight: bold;
+  text-transform: y;
+  color: #a8e7dd;
+  margin: 0px;
+  margin-top: 12px;
 }
 
 /* Search Bar */
-.search-bar {
-  flex-grow: 1; /* Take the available space */
-  padding: 10px 45px 10px 15px; /* Space for the search icon */
+.search-container {
+  display: flex;
+  justify-content: center; /* Center the search bar */
+  align-items: center; /* Vertically align items */
+  position: relative; /* For positioning the search icon */
+  width: 580px;
+  margin-left: -60px;
+  gap: 10px;
+  margin-top: -10px;
+}
+
+.search-input {
+  width: 100%; /* Full width inside the container */
+  padding: 10px 40px 10px 12px; /* Space for icon and text */
   border: 1px solid #ccc;
-  border-radius: 25px;
+  border-radius: 25px; /* Rounded edges */
   font-size: 16px;
-  outline: none;
-  transition: border-color 0.3s;
 }
 
-.search-bar:focus {
-  border-color: #3da2a0; /* Highlighted color on focus */
-}
-
-/* Placeholder */
-.search-bar::placeholder {
-  color: #aaa;
-  font-size: 14px;
-}
-
-/* Search Icon */
 .search-icon {
-  position: absolute;
-  left: calc(100% - 45px); /* Position the search icon relative to the bar */
-  font-size: 18px;
+  display: flex;
+  position: relative;
+  right: 55px; /* Position the icon inside the search bar */
   color: #888;
+  font-size: 18px;
   cursor: pointer;
 }
-
 /* Right-side Icons */
 .right-icons {
-  position: absolute;
-  top: 50%; /* Center vertically with the search bar */
-  transform: translateY(-50%);
-  right: -130px; /* 50px from the search bar + 50px padding */
   display: flex;
-  gap: 20px; /* Space between icons */
+  gap: 20px; /* Space between each icon */
+  margin-right: -400px;
+  margin-left: 2px;
+  align-items: center;
+  margin-top: 9px;
+
 }
 
 .icon {
-  font-size: 20px;
-  color: #3d6264;
+  font-size: 25px;
+  color: #73c2b5;
   cursor: pointer;
   transition: color 0.3s;
+  
 }
 
 .icon:hover {
-  color: #85ede8; /* Highlight color on hover */
+  color: #a8e7dd; /* Highlight color on hover */
 }
